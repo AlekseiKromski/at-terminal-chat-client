@@ -29,7 +29,7 @@ func displayMessageHandler(messageJsonString []byte) {
 	}
 
 	nameColor := color.New(color.FgHiWhite).Add(color.BgBlue)
-	textColor := color.New(color.FgHiWhite).Add(color.BgWhite)
+	textColor := color.New(color.FgHiWhite).Add(color.FgHiWhite)
 	nameColor.Printf("[%s]:", message.From)
 	textColor.Printf(" %s ", message.Message)
 }
