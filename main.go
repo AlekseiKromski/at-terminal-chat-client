@@ -9,12 +9,13 @@ import (
 )
 
 func main() {
+
 	var url_custom string
 	warning := color.New(color.FgHiWhite).Add(color.BgYellow)
 	warning.Printf("Enter server ip and address> ")
 	fmt.Scan(&url_custom)
 
-	server_url := url.URL{Scheme: "ws", Host: "localhost:3000", Path: "/"}
+	server_url := url.URL{Scheme: "ws", Host: url_custom, Path: "/"}
 	c, _, err := websocket.DefaultDialer.Dial(server_url.String(), nil)
 	if err != nil {
 		log.Fatal("dial:", err)
