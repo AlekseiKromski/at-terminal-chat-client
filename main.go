@@ -19,7 +19,7 @@ func main() {
 	servers := []Server{
 		Server{
 			Name: "Public main server",
-			Ip:   "alekseikromski.space:3009",
+			Ip:   "at-terminal-chat-server.alekseikromski.com",
 		},
 	}
 	info := color.New(color.FgHiWhite).Add(color.BgHiMagenta)
